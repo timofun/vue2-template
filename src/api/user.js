@@ -6,7 +6,7 @@ import request from '@/utils/request'
  */
 export function personDetail () {
   return request({
-    url: '/personDetail',
+    url: '/pc/personDetail',
     method: 'get'
   })
 }

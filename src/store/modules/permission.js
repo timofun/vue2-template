@@ -36,6 +36,7 @@ function filterAsyncRouter (asyncRouterMap, nativeRouter) {
       route.push(tem)
     }
   })
+  console.log('route', route)
   return route
 }
 

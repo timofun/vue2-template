@@ -49,7 +49,7 @@ export const asyncRouterMap = [
   {
     path: '/',
     component: Layout,
-    redirect: '/data-view/view-free',
+    redirect: '/index',
     children: [
       {
         path: '/user',

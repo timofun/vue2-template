@@ -6,7 +6,7 @@
  */
 
 // 开发 http://10.10.10.70 http://49.233.163.136:3002 http://10.10.10.70:8080
-const DEV_API = 'https://www.fanqy.cn/gym-admin/admin'
+const DEV_API = 'https://asset.jc-test.cn/customer/api'
 // 测试
 const TEST_API = 'https://www.fanqy.cn/gym-admin/admin'
 // 生产

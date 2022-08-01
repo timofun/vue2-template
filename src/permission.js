@@ -25,23 +25,9 @@ router.beforeEach(async (to, from, next) => {
           // 动态添加可访问路由表
           router.addRoutes(routesRes)
           // 这样可以保证打印的路由是完整的，不然动态添加的是无法打印的
-          // router.options.routes.push(routesRes)
-          let currPath = ''
-          if (routesRes.length) {
-            const parentPath = routesRes[0].children[1]
-            if (parentPath.children && parentPath.children.length) {
-              currPath = `${parentPath.path}/${parentPath.children[0].path}`
-            } else {
-              currPath = `${parentPath.path}`
-            }
-          }
-          if (to.path === '/') {
-            next({ ...to, path: currPath, replace: true })
-          } else {
-            // hack方法 确保addRoutes已完成
-            next({ ...to, replace: true })
-          }
-          // next({ ...to, replace: true })
+          router.options.routes.push(routesRes)
+          // hack方法 确保addRoutes已完成
+          next({ ...to, replace: true })
         } catch (error) {
           next('/login')
           NProgress.done()

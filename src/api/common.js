@@ -8,7 +8,7 @@ import request from '@/utils/request'
  */
 export function login (account, password) {
   return request({
-    url: '/login',
+    url: '/pc/login',
     method: 'post',
     data: {
       account, password
@@ -22,14 +22,14 @@ export function login (account, password) {
  */
 export function menu () {
   return request({
-    url: '/menu/tree/user',
+    url: '/common/cusMenu/tree/user',
     method: 'get'
   })
 }
 
 export function buttonPower () {
   return request({
-    url: '/menu/tree/button',
+    url: '/common/cusMenu/tree/button',
     method: 'get'
   })
 }

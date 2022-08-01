@@ -1,55 +1,7 @@
 const nativeRouter = {
-  // '/index': {
-  //   path: '/index',
-  //   component: resolve => require(/* webpackChunkName: "index" */ ['@/views/home/index'], resolve),
-  //   name: 'Index',
-  //   meta: {
-  //     title: '首页',
-  //     pageAuth: true
-  //   }
-  // }, // 首页
-  // '/data-view': {
-  //   path: '/data-view',
-  //   component: resolve => require(/* webpackChunkName: "index" */ ['@/views/data-view/index'], resolve),
-  //   redirect: '/data-view/view-free',
-  //   name: 'DataView',
-  //   meta: {
-  //     title: '数据看板',
-  //     pageAuth: true,
-  //     icon: 'view'
-  //   }
-  // }, // 数据看板
-  // 'view-pay': {
-  //   path: 'view-pay',
-  //   component: resolve => require(/* webpackChunkName: "index" */ ['@/views/home/index'], resolve),
-  //   name: 'ViewPay',
-  //   meta: {
-  //     title: '付费看板',
-  //     pageAuth: true
-  //   }
-  // }, // 付费看板
-  // 'view-free': {
-  //   path: 'view-free',
-  //   component: resolve => require(/* webpackChunkName: "index" */ ['@/views/data-view/data-view-free'], resolve),
-  //   name: 'ViewFree',
-  //   meta: {
-  //     title: '免费看板',
-  //     pageAuth: true
-  //   }
-  // }, // 免费看板
-  // 'view-city': {
-  //   path: 'view-city',
-  //   component: resolve => require(/* webpackChunkName: "index" */ ['@/views/home/index'], resolve),
-  //   name: 'ViewCity',
-  //   meta: {
-  //     title: '市级管理看板',
-  //     pageAuth: true
-  //   }
-  // }, // 市局看板
-  '/gym': {
-    path: '/gym',
+  '/index': {
+    path: '/index',
     component: resolve => require(/* webpackChunkName: "gym-setting" */ ['@/views/gym-setting/index'], resolve),
-    redirect: 'noRedirect',
     name: 'GymSetting',
     meta: {
       title: '健身房设置',
@@ -57,8 +9,8 @@ const nativeRouter = {
       icon: 'gym'
     }
   }, // 健身房设置
-  'gym-setting': {
-    path: 'gym-setting',
+  '/backlog': {
+    path: '/backlog',
     component: resolve => require(/* webpackChunkName: "gym-manage" */ ['@/views/gym-setting/gym-manage'], resolve),
     name: 'Gym',
     meta: {
@@ -117,8 +69,8 @@ const nativeRouter = {
       activeMenu: '/gym/gym-setting'
     }
   }, // 健身房管理-预约时段
-  'gym-inout-record': {
-    path: 'gym-inout-record',
+  '/asset-manage': {
+    path: '/asset-manage',
     component: resolve => require(/* webpackChunkName: "gym-inout-record" */ ['@/views/gym-setting/access-records'], resolve),
     name: 'Access',
     meta: {

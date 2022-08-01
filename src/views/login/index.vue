@@ -93,7 +93,7 @@ export default {
           this.loading = true
           login(account, this.RSAencrypt(password)).then(({ data }) => {
             if (data.code === REQ_OK) {
-              setToken(data.data.token)
+              setToken(data.data.access_token)
               setTimeout(() => {
                 this.$router.push({ path: '/' })
               }, 500)
